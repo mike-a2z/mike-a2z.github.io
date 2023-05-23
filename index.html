@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <style>html{box-sizing:border-box;}body{margin:0;padding:0;}*,*::before,*::after{box-sizing:inherit;}</style>
+  </head>
+  <body>
+    <div id="react"></div>
+    <script>
+window.__data__ = {};
+try {
+  window.__data__ = JSON.parse(window.localStorage.getItem('cv:data') || '{}');
+  window.localStorage.setItem('cv:data', JSON.stringify(window.__data__));
+} catch {}
+const scriptElement = window.document.createElement('script');
+const now = Date.now();
+scriptElement.src = `https://unpkg.com/@mike-a2z/cv/dist/index.js?t=${now}`;
+scriptElement.async = true;
+window.document.body.appendChild(scriptElement);
+    </script>
+  </body>
+</html>
